@@ -1,5 +1,5 @@
 ---
-title: Test Looks on Jupyter Lab
+title: Getting Started with Python
 layout: post-notes
 tags: [notes, python]
 ---
