@@ -1,72 +1,14 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+title: Test Looks on Jupyter Lab
+layout: post-notes
+tags: [notes, python]
+---
 
-    <!-- Bootstrap CSS -->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="/assets/css/blog.css" rel="stylesheet">
-
-    <title>qnods</title>
-  </head>
-  <body>
-
-    <!-- Site Title -->
-    <div class="container">
-        <header class="blog-header py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-4 pt-1">
-                  <a class="link-secondary" href="mailto:hello@qnods.com">Email Us</a>
-                </div>
-                <div class="col-4 text-center">
-                  <a class="blog-header-logo text-dark" href="#"><img src="/assets/images/Qnods%20Profile.jpg" alt="" width="80" height="80"></a>
-                </div>
-                <div class="col-4 d-flex justify-content-end align-items-center">
-                  <form action="/search.html" method="get">
-                    <input class="form-control" type="text" id="search-box" name="query" placeholder="type and press enter">
-                  </form>
-                </div>
-            </div>
-        </header>
-      
-        <div class="nav-scroller py-1 mb-2">
-          <nav class="nav d-flex justify-content-center">
-            <a class="p-2 link-secondary" href="/index.html">Home</a>
-            <a class="p-2 link-secondary" href="/notes.html">Notes</a>
-            <a class="p-2 link-secondary" href="/projects.html">Projects</a>
-            <a class="p-2 link-secondary" href="/python.html">Python</a>
-            <a class="p-2 link-secondary" href="/anaconda.html">Anaconda</a>
-            <a class="p-2 link-secondary" href="/web.html">Web</a>
-            <a class="p-2 link-secondary" href="/ruby.html">Ruby</a>
-          </nav>
-        </div>
-    </div>
-    
-    <!-- Highlight Content -->
-    <div class="container pb-5">
-    <div class="row">
-      <div class="col-lg-3">
-      </div>
-      <div class="col-lg-6 pt-3">
-        <div>
-            <h6><i>
-            
-            Tags:
-            anaconda, notes, python
-            
-            </i></h6>
-            <h1>Test Looks on Jupyter Lab</h1>
-        </div>
-        <div class="mt-3 pb-5">
-            <html>
+<html>
 <head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Test</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Getting Started on Python</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14322,122 +14264,34 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This cell is Markdown</p>
+<p>This is a guide that I create for installation of python direct from python.org</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="HEading1">Heading1<a class="anchor-link" href="#HEading1">&#182;</a></h1><h2 id="Heading-2">Heading 2<a class="anchor-link" href="#Heading-2">&#182;</a></h2><h3 id="Heading-3">Heading 3<a class="anchor-link" href="#Heading-3">&#182;</a></h3><p><em>italic</em>
-<strong>bold</strong></p>
-<ul>
-<li>list 1</li>
-<li>list 2</li>
-<li>list 3</li>
-</ul>
 <ol>
-<li>order 1</li>
-<li>order 2</li>
-<li>order 3</li>
+<li>Start with dowloading python from www.python.org</li>
+<li>Install python from the downloaded file</li>
+<li>How to check if python has successfully installed ?
+A: Open your terminal and type <code>python --version</code> and python should come with its version installed</li>
+<li>Create virtual environment
+This is for safe precaution, in the event of anything wrong, all you need to do is just deleted the environment isntead reinstalled python from the 
+start. this can be done by following the step below.<ul>
+<li>create a folder where you want all your python packages and data to be installed, for instance lets name it <strong>pythondata</strong></li>
+<li>you can make folder by using usual way of right click and new folder or if you want to try to from terminal, you can make folder by using <strong>mkdir</strong> command, in this case we will type <code>mkdir pythondata</code></li>
+<li>next, if you are not yet in the terminal, open your terminal, go into the folder that you just created using <strong>cd</strong> command, like <code>cd python/pythondata</code> if that is the location of your folder. </li>
+<li>after enter the folder type this command <code>python -m env work</code> with <strong>work</strong> is the name of your environment. You can change <strong>work</strong> into any other name.</li>
+<li>and that's it, an environment called <strong>work</strong> should have been created.</li>
+</ul>
+</li>
+<li>After the environment has been created and still on terminal and on your folder, type <code>cd work</code> with work is the name of environment you just created.</li>
+<li>then type <code>\Scripts\activate.bat</code> and voila you will be entering your environment. </li>
 </ol>
-<blockquote><p>Blocquote</p>
-</blockquote>
-<hr />
-<p>This is an <code>inline code</code></p>
-<p>This is a longer code</p>
-
-<pre><code>lorem ipsum dolores amet
-lorem ipsum dolores amet
-lorem ipsum dolores amet</code></pre>
+<h3 id="Additional-Note">Additional Note<a class="anchor-link" href="#Additional-Note">&#182;</a></h3><p>To install any python package, you can just this command <code>python -m pip install numpy</code> with numpy is the name of the package.</p>
+<p>To remove environment, just ensure you have deactivated the environment first by simply typing <code>deactivate</code> while you are still in environment and delete the respective folder.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">area</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;hallway&quot;</span><span class="p">,</span><span class="mf">10.00</span><span class="p">,</span><span class="s2">&quot;living room&quot;</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">area</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>10.0
-[10.0, &#39;living room&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>12
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 </body>
 
@@ -14447,76 +14301,4 @@ lorem ipsum dolores amet</code></pre>
 
 
 
-</html>
-
-        </div>
-        <div pb-5>
-          <div class="row">
-            <h3>Other Posts in Notes</h3>
-          </div>
-          <div class="row pb-5">
-            
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h4 class="card-title"><a href="/posts/test.html">Test Looks on Jupyter Lab</a></h4>
-                    <p>
-                      
-                        anaconda notes python
-                      
-                    </p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted postDate">written on 24 Jan 21</small>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-body">
-                    <h4 class="card-title"><a href="/posts/python-start.html">Test Looks on Jupyter Lab</a></h4>
-                    <p>
-                      
-                        notes python
-                      
-                    </p>
-                  </div>
-                  <div class="card-footer">
-                    <small class="text-muted postDate">written on 17 Jan 21</small>
-                  </div>
-                </div>
-              </div>
-            
-            </div>
-        </div>
-      </div>
-      <div class="col-lg-3">
-      </div>
-    </div>
-</div>
-
-<!-- Bootstrap CSS -->
-<link href="/assets/css/bootstrap.css" rel="stylesheet">
-
-<!-- Custom CSS -->
-<link href="/assets/css/blog.css" rel="stylesheet">
-    <!-- /.container -->
-
-    <!-- Footer -->
-    <footer class="blog-footer fixed-bottom p-3">
-      <p>Part of <a href="https://www.edwardjoesoef.com/">Edward Joesoef</a> ecosystem.</p>
-    </footer>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
-  </body>
 </html>
