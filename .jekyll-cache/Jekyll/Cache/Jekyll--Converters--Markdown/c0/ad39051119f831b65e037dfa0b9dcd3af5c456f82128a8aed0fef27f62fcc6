@@ -1,0 +1,28 @@
+I";<main class="container pt-3 pb-5">
+    <h2 class="pb-3">All Posts from Projects</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+    
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <h4 class="card-title"><a href="/posts/simple-battleship.html">Simple Battleship Game with JavaScript</a></h4>
+            <p>
+              
+                javascript projects web
+              
+            </p>
+            <p class="card-text"><html>
+<head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head></html>
+</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted postDate">written on 11 February 2021</small>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+</main>
+:ET

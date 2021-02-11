@@ -1,5 +1,5 @@
 ---
-title: Simple Battleship Game Using JavaScript
+title: Simple Battleship Game with JavaScript
 layout: post-projects
 tags: [projects, javascript, web]
 ---
@@ -14270,51 +14270,86 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="kd">var</span> <span class="nx">randomNumber</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">9</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">randomNumber</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">7</span><span class="p">)</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">location1</span> <span class="o">=</span> <span class="nx">randomNumber</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">location2</span> <span class="o">=</span> <span class="nx">location1</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">location3</span> <span class="o">=</span> <span class="nx">location2</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
 
+<span class="kd">var</span> <span class="nx">location1Hit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">location2Hit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">location3Hit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
 <span class="kd">var</span> <span class="nx">guess</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">hits</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">guesses</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+
 
 <span class="kd">var</span> <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 
 <span class="kd">function</span> <span class="nx">battleship</span><span class="p">(){</span>
         <span class="k">while</span> <span class="p">(</span><span class="nx">isSunk</span> <span class="o">==</span> <span class="kc">false</span><span class="p">){</span>
 
-            <span class="nx">guess</span> <span class="o">=</span> <span class="nx">prompt</span> <span class="p">(</span><span class="s2">&quot;Put coordinate to aim your cannon by enterring any number between 0 to 10:&quot;</span><span class="p">);</span>
+            <span class="nx">guess</span> <span class="o">=</span> <span class="nx">prompt</span> <span class="p">(</span><span class="s2">&quot;Put coordinate to aim your cannon by enterring any number between 0 to 9:&quot;</span><span class="p">);</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&lt;</span> <span class="mf">0</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">&gt;</span> <span class="mf">10</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&lt;</span> <span class="mf">1</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">&gt;</span> <span class="mf">10</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Invalid Coordinate !! Enter a valid number&quot;</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location1</span> <span class="o">&amp;&amp;</span> <span class="nx">location1Hit</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location2</span> <span class="o">&amp;&amp;</span> <span class="nx">location2Hit</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location3</span> <span class="o">&amp;&amp;</span> <span class="nx">location3Hit</span> <span class="o">==</span> <span class="kc">true</span><span class="p">){</span>
+                <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You have hit this part of submarine, aim for the other part&quot;</span><span class="p">);</span>
             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
                 <span class="nx">guesses</span> <span class="o">=</span> <span class="nx">guesses</span><span class="o">+</span><span class="mf">1</span><span class="p">;</span>
 
-                <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location1</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location2</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location3</span><span class="p">){</span>
-
+                <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location1</span><span class="p">){</span>
+                    
+                    <span class="nx">location1Hit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
                     <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You hit enemy&#39;s submarine !!!&quot;</span><span class="p">);</span>
                     <span class="nx">hits</span> <span class="o">=</span> <span class="nx">hits</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+                    
 
                     <span class="k">if</span> <span class="p">(</span><span class="nx">hits</span> <span class="o">===</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
                     <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
                     <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Enemy submarine has been successfully sunk&quot;</span><span class="p">)</span>
                     <span class="p">}</span>
+                    
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location2</span><span class="p">){</span>
+                    
+                    <span class="nx">location2Hit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You hit enemy&#39;s submarine !!!&quot;</span><span class="p">);</span>
+                    <span class="nx">hits</span> <span class="o">=</span> <span class="nx">hits</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+                    
+
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">hits</span> <span class="o">===</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Enemy submarine has been successfully sunk&quot;</span><span class="p">)</span>
+                    <span class="p">}</span>
+                    
+                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location3</span><span class="p">){</span>
+                    
+                    <span class="nx">location3Hit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You hit enemy&#39;s submarine !!!&quot;</span><span class="p">);</span>
+                    <span class="nx">hits</span> <span class="o">=</span> <span class="nx">hits</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+                    
+
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">hits</span> <span class="o">===</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Enemy submarine has been successfully sunk&quot;</span><span class="p">)</span>
+                    <span class="p">}</span>
+                    
                 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
                     <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Oops, your missed your shoot&quot;</span><span class="p">);</span>
                 <span class="p">}</span>
             <span class="p">}</span>
         <span class="p">}</span>
-
+        
+        <span class="kd">var</span> <span class="nx">total</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="mf">3</span><span class="o">/</span><span class="nx">guesses</span><span class="p">)</span><span class="o">*</span><span class="mf">100</span><span class="p">)</span>
         <span class="kd">var</span> <span class="nx">stats</span> <span class="o">=</span> <span class="s2">&quot;You have guessed &quot;</span> <span class="o">+</span> <span class="nx">guesses</span> <span class="o">+</span> <span class="s2">&quot; times for enemy&#39;s ship position. &quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;Your have &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="mf">3</span><span class="o">/</span><span class="nx">guesses</span><span class="p">)</span><span class="o">*</span><span class="mf">100</span> <span class="o">+</span><span class="s2">&quot;% shooting acuracy for this game &quot;</span><span class="p">;</span>
+        <span class="s2">&quot;Your have &quot;</span> <span class="o">+</span> <span class="nx">total</span> <span class="o">+</span><span class="s2">&quot;% shooting acuracy for this game &quot;</span><span class="p">;</span>
         <span class="nx">alert</span><span class="p">(</span><span class="nx">stats</span><span class="p">);</span>
         
         <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Game Over, refresh this page and press start to start a new game&quot;</span><span class="p">)</span>
@@ -14325,7 +14360,7 @@ a.anchor-link {
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Battleship<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Enemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 10<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Enemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 9<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;battleship()&quot;</span><span class="p">&gt;</span>Start Game<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -14357,44 +14392,79 @@ a.anchor-link {
 <html>
 <head>
 <script>
-var randomNumber = Math.floor(Math.random() * 9)
+var randomNumber = Math.floor((Math.random() * 7)+1)
 var location1 = randomNumber;
 var location2 = location1 + 1;
 var location3 = location2 + 1;
 
+var location1Hit = false;
+var location2Hit = false;
+var location3Hit = false;
+
 var guess;
 var hits = 0;
 var guesses = 0;
+
 
 var isSunk = false;
 
 function battleship(){
         while (isSunk == false){
 
-            guess = prompt ("Put coordinate to aim your cannon by enterring any number between 0 to 10:");
+            guess = prompt ("Put coordinate to aim your cannon by enterring any number between 0 to 9:");
 
-            if (guess < 0 || guess > 10) {
+            if (guess < 1 || guess > 10) {
                 alert("Invalid Coordinate !! Enter a valid number");
+            } else if (guess == location1 && location1Hit == true || guess == location2 && location2Hit == true || guess == location3 && location3Hit == true){
+                alert("You have hit this part of submarine, aim for the other part");
             } else {
                 guesses = guesses+1;
 
-                if (guess == location1 || guess == location2 || guess == location3){
-
+                if (guess == location1){
+                    
+                    location1Hit = true;
                     alert("You hit enemy's submarine !!!");
                     hits = hits + 1;
+                    
 
                     if (hits === 3) {
                     isSunk = true;
                     alert("Enemy submarine has been successfully sunk")
                     }
+                    
+                } else if (guess == location2){
+                    
+                    location2Hit = true;
+                    alert("You hit enemy's submarine !!!");
+                    hits = hits + 1;
+                    
+
+                    if (hits === 3) {
+                    isSunk = true;
+                    alert("Enemy submarine has been successfully sunk")
+                    }
+                    
+                } else if (guess == location3){
+                    
+                    location3Hit = true;
+                    alert("You hit enemy's submarine !!!");
+                    hits = hits + 1;
+                    
+
+                    if (hits === 3) {
+                    isSunk = true;
+                    alert("Enemy submarine has been successfully sunk")
+                    }
+                    
                 } else {
                     alert("Oops, your missed your shoot");
                 }
             }
         }
-
+        
+        var total = Math.floor((3/guesses)*100)
         var stats = "You have guessed " + guesses + " times for enemy's ship position. " +
-        "Your have " + (3/guesses)*100 +"% shooting acuracy for this game ";
+        "Your have " + total +"% shooting acuracy for this game ";
         alert(stats);
         
         alert("Game Over, refresh this page and press start to start a new game")
@@ -14421,20 +14491,6 @@ function battleship(){
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div>
