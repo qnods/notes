@@ -57,17 +57,17 @@
             <h6><i>
             
             Tags:
-            notes, python
+            anaconda, notes
             
             </i></h6>
-            <h1>Basic Python 101</h1>
+            <h1>Getting Started with Anaconda</h1>
         </div>
         <div class="mt-3 pb-5">
             <html>
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Basic Python 101</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>The Anaconda Way</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14323,304 +14323,56 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In this note, I will record my earlier understanding about how to use Python</p>
-<h3 id="Putting-up-a-comment">Putting up a comment<a class="anchor-link" href="#Putting-up-a-comment">&#182;</a></h3><p>Comment in the script will be written by putting <code>#</code> in front of the comment you want to write.</p>
+<p>This my notes on how I start with Anaconda.</p>
+<p>As per usual start with Anaconda, as per the time this is written I need to choose Anaconda Individual Edition from Anaconda website and install it as per usual like any other program.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#this will not appear in the output</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this one will appear in the output&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>this one will appear in the output
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Math-Operator">Math Operator<a class="anchor-link" href="#Math-Operator">&#182;</a></h3><p>There are couple of math operator that can be used within python. All of them can be used in combination with each other</p>
-<ul>
-<li><code>+</code> for addition</li>
-<li><code>-</code> for substraction</li>
-<li><code>/</code> for division</li>
-<li><code>*</code> for multiplication</li>
-<li><code>**</code> for exponentiaation</li>
-<li><code>%</code> for remainder</li>
-</ul>
+<h3 id="Create-Environment-in-Anaconda">Create Environment in Anaconda<a class="anchor-link" href="#Create-Environment-in-Anaconda">&#182;</a></h3><p><code>conda create --name ENV_NAME python=PYTHON_VERSION</code><br />
+Change "ENV_NAME" to the environment name of your choice, same with PYTHON_VERSION, it should be change into actual version of python like 2.7 or 3.7, etc. A simple way is to create environment via Anaconda Navigator.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="mi">8</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="mi">16</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="mi">9</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="mi">8</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span> <span class="p">(</span><span class="mi">14</span><span class="o">%</span><span class="k">3</span>)
-<span class="nb">print</span> <span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>7
-6
-8.0
-18
-64
-2
-15
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Variable">Variable<a class="anchor-link" href="#Variable">&#182;</a></h3><p>Let's talk about variable. A <strong>variable</strong> allow us to use its value by referring to the name of the variable.</p>
+<h3 id="Activate-Environment">Activate Environment<a class="anchor-link" href="#Activate-Environment">&#182;</a></h3><p><code>conda activate ENV_NAME</code><br />
+Change ENV_NAME into the name of environment you just created that you want to activate</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#The code below is a variable and the number 777 is the value</span>
-<span class="n">lucky_number</span> <span class="o">=</span> <span class="mi">777</span>
-
-<span class="c1"># We can print lucky number by just mentioning its name</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">lucky_number</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>777
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Types-of-Variable">Types of Variable<a class="anchor-link" href="#Types-of-Variable">&#182;</a></h3><p>There are many types of variable, such as</p>
-<ul>
-<li><code>int</code> or integer is a full number without fraction</li>
-<li><code>float</code> is a number that contain fraction</li>
-<li><code>str</code> or string is a text. Text need to be written within single quote or double quote mark</li>
-<li><code>bool</code> or boolean which is basically just True or False</li>
-</ul>
+<h3 id="Deactivate-Environment">Deactivate Environment<a class="anchor-link" href="#Deactivate-Environment">&#182;</a></h3><p><code>conda deactivate</code></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#let&#39;s guess the type for its variable below</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;Good Morning&quot;</span>
-<span class="n">d</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="c1">#Ready to see the answer ?</span>
-<span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-<span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
-<span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;class &#39;int&#39;&gt;
-&lt;class &#39;float&#39;&gt;
-&lt;class &#39;str&#39;&gt;
-&lt;class &#39;bool&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Variable-Conversion">Variable Conversion<a class="anchor-link" href="#Variable-Conversion">&#182;</a></h3><p>Python allow us to convert the variable type, otherwise we cannot combine two variable into one print. This is the example:</p>
+<h3 id="Delete-Environment">Delete Environment<a class="anchor-link" href="#Delete-Environment">&#182;</a></h3><p><code>conda env remove -n ENV_NAME</code><br />
+Change ENV_NAME into the name of environment you need to remove</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#originally this is a integer variable</span>
-<span class="n">e</span> <span class="o">=</span> <span class="mi">888</span>
-
-<span class="c1">#let&#39;s try to put that into a sentence</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;I have &quot;</span> <span class="o">+</span> <span class="n">e</span> <span class="o">+</span> <span class="s2">&quot; apples&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-13-fdd9c2a0283b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">      3</span> 
-<span class="ansi-green-fg">      4</span> <span class="ansi-red-intense-fg ansi-bold">#let&#39;s try to put that into a sentence</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 5</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print <span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;I have &#34;</span> <span class="ansi-yellow-intense-fg ansi-bold">+</span> e <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">&#34; apples&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: can only concatenate str (not &#34;int&#34;) to str</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># so this is how I convert the variable</span>
-<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;I have &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; apples&quot;</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>I have 888 apples
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>And that's really plenty of apple.</p>
+<h3 id="Update-Python">Update Python<a class="anchor-link" href="#Update-Python">&#182;</a></h3><p><code>conda update python</code><br />
+Change ENV_NAME into the name of environment you need to remove</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Install-JupyterLab">Install JupyterLab<a class="anchor-link" href="#Install-JupyterLab">&#182;</a></h3><p><code>conda install -c conda-forge jupyterlab</code><br />
+<code>conda install -c conda-forge jupyterlab=3.0.6</code><br />
+And you can change <em>3.0.6</em> into anyt jupyterlab version that you want</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Update-JupyterLab">Update JupyterLab<a class="anchor-link" href="#Update-JupyterLab">&#182;</a></h3><p><code>conda update -c conda-forge jupyterlab</code></p>
 
 </div>
 </div>
