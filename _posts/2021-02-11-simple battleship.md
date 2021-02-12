@@ -14270,14 +14270,14 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="kd">var</span> <span class="nx">randomNumber</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">7</span><span class="p">)</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">randomNumber</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">8</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">location1</span> <span class="o">=</span> <span class="nx">randomNumber</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">location2</span> <span class="o">=</span> <span class="nx">location1</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">location3</span> <span class="o">=</span> <span class="nx">location2</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
@@ -14298,7 +14298,7 @@ a.anchor-link {
 
             <span class="nx">guess</span> <span class="o">=</span> <span class="nx">prompt</span> <span class="p">(</span><span class="s2">&quot;Put coordinate to aim your cannon by enterring any number between 0 to 9:&quot;</span><span class="p">);</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&lt;</span> <span class="mf">1</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">&gt;</span> <span class="mf">10</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&lt;</span> <span class="mf">1</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">&gt;</span> <span class="mf">9</span><span class="p">)</span> <span class="p">{</span>
                 <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Invalid Coordinate !! Enter a valid number&quot;</span><span class="p">);</span>
             <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location1</span> <span class="o">&amp;&amp;</span> <span class="nx">location1Hit</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location2</span> <span class="o">&amp;&amp;</span> <span class="nx">location2Hit</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location3</span> <span class="o">&amp;&amp;</span> <span class="nx">location3Hit</span> <span class="o">==</span> <span class="kc">true</span><span class="p">){</span>
                 <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You have hit this part of submarine, aim for the other part&quot;</span><span class="p">);</span>
@@ -14392,7 +14392,7 @@ a.anchor-link {
 <html>
 <head>
 <script>
-var randomNumber = Math.floor((Math.random() * 7)+1)
+var randomNumber = Math.floor((Math.random() * 8))
 var location1 = randomNumber;
 var location2 = location1 + 1;
 var location3 = location2 + 1;
@@ -14413,7 +14413,7 @@ function battleship(){
 
             guess = prompt ("Put coordinate to aim your cannon by enterring any number between 0 to 9:");
 
-            if (guess < 1 || guess > 10) {
+            if (guess < 1 || guess > 9) {
                 alert("Invalid Coordinate !! Enter a valid number");
             } else if (guess == location1 && location1Hit == true || guess == location2 && location2Hit == true || guess == location3 && location3Hit == true){
                 alert("You have hit this part of submarine, aim for the other part");
@@ -14475,7 +14475,7 @@ function battleship(){
 <body>
 
 <h3>Battleship</h3>
-<p>Enemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 10</p>
+<p>Enemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 9</p>
 <button type="button" onclick="battleship()">Start Game</button>
 
 </body>
