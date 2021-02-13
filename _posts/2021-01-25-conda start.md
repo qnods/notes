@@ -3,6 +3,7 @@ title: Getting Started with Anaconda
 layout: post-notes
 tags: [notes, anaconda]
 ---
+
 <html>
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
