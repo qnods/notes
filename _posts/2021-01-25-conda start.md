@@ -14298,8 +14298,14 @@ Change ENV_NAME into the name of environment you need to remove</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Update-Python">Update Python<a class="anchor-link" href="#Update-Python">&#182;</a></h3><p><code>conda update python</code><br>
-Change ENV_NAME into the name of environment you need to remove</p>
+<h3 id="Update-Python">Update Python<a class="anchor-link" href="#Update-Python">&#182;</a></h3><p><code>conda update python</code></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Update-Anaconda">Update Anaconda<a class="anchor-link" href="#Update-Anaconda">&#182;</a></h3><p><code>conda update --all</code><br>
+This need to be done for all environments</p>
 
 </div>
 </div>
@@ -14320,9 +14326,3 @@ And you can change <em>3.0.6</em> into anyt jupyterlab version that you want</p>
 </body>
 
 
-
-
-
-
-
-</html>

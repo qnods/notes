@@ -1,8 +1,8 @@
-I"ä<html>
+I"ƒ¸<html>
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Simple BattleShip</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>The Anaconda Way</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14258,242 +14258,66 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>This is a simple battleship game, that I create using JavaScript</p>
+<p>This my notes on how I start with Anaconda.</p>
+<p>As per usual start with Anaconda, as per the time this is written I need to choose Anaconda Individual Edition from Anaconda website and install it as per usual like any other program.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="kd">var</span> <span class="nx">randomNumber</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">8</span><span class="p">))</span>
-<span class="kd">var</span> <span class="nx">location1</span> <span class="o">=</span> <span class="nx">randomNumber</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">location2</span> <span class="o">=</span> <span class="nx">location1</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">location3</span> <span class="o">=</span> <span class="nx">location2</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Create-Environment-in-Anaconda">Create Environment in Anaconda<a class="anchor-link" href="#Create-Environment-in-Anaconda">&#182;</a></h3><p><code>conda create --name ENV_NAME python=PYTHON_VERSION</code><br />
+Change "ENV_NAME" to the environment name of your choice, same with PYTHON_VERSION, it should be change into actual version of python like 2.7 or 3.7, etc. A simple way is to create environment via Anaconda Navigator.</p>
 
-<span class="kd">var</span> <span class="nx">location1Hit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">location2Hit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">location3Hit</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-<span class="kd">var</span> <span class="nx">guess</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">hits</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">guesses</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-
-
-<span class="kd">var</span> <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-<span class="kd">function</span> <span class="nx">battleship</span><span class="p">(){</span>
-        <span class="k">while</span> <span class="p">(</span><span class="nx">isSunk</span> <span class="o">==</span> <span class="kc">false</span><span class="p">){</span>
-
-            <span class="nx">guess</span> <span class="o">=</span> <span class="nx">prompt</span> <span class="p">(</span><span class="s2">&quot;Put coordinate to aim your cannon by enterring any number between 0 to 9:&quot;</span><span class="p">);</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">&lt;</span> <span class="mf">1</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">&gt;</span> <span class="mf">9</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Invalid Coordinate !! Enter a valid number&quot;</span><span class="p">);</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location1</span> <span class="o">&amp;&amp;</span> <span class="nx">location1Hit</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location2</span> <span class="o">&amp;&amp;</span> <span class="nx">location2Hit</span> <span class="o">==</span> <span class="kc">true</span> <span class="o">||</span> <span class="nx">guess</span> <span class="o">==</span> <span class="nx">location3</span> <span class="o">&amp;&amp;</span> <span class="nx">location3Hit</span> <span class="o">==</span> <span class="kc">true</span><span class="p">){</span>
-                <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You have hit this part of submarine, aim for the other part&quot;</span><span class="p">);</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="nx">guesses</span> <span class="o">=</span> <span class="nx">guesses</span><span class="o">+</span><span class="mf">1</span><span class="p">;</span>
-
-                <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location1</span><span class="p">){</span>
-                    
-                    <span class="nx">location1Hit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You hit enemy&#39;s submarine !!!&quot;</span><span class="p">);</span>
-                    <span class="nx">hits</span> <span class="o">=</span> <span class="nx">hits</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
-                    
-
-                    <span class="k">if</span> <span class="p">(</span><span class="nx">hits</span> <span class="o">===</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Enemy submarine has been successfully sunk&quot;</span><span class="p">)</span>
-                    <span class="p">}</span>
-                    
-                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location2</span><span class="p">){</span>
-                    
-                    <span class="nx">location2Hit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You hit enemy&#39;s submarine !!!&quot;</span><span class="p">);</span>
-                    <span class="nx">hits</span> <span class="o">=</span> <span class="nx">hits</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
-                    
-
-                    <span class="k">if</span> <span class="p">(</span><span class="nx">hits</span> <span class="o">===</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Enemy submarine has been successfully sunk&quot;</span><span class="p">)</span>
-                    <span class="p">}</span>
-                    
-                <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">guess</span> <span class="o">==</span> <span class="nx">location3</span><span class="p">){</span>
-                    
-                    <span class="nx">location3Hit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;You hit enemy&#39;s submarine !!!&quot;</span><span class="p">);</span>
-                    <span class="nx">hits</span> <span class="o">=</span> <span class="nx">hits</span> <span class="o">+</span> <span class="mf">1</span><span class="p">;</span>
-                    
-
-                    <span class="k">if</span> <span class="p">(</span><span class="nx">hits</span> <span class="o">===</span> <span class="mf">3</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="nx">isSunk</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Enemy submarine has been successfully sunk&quot;</span><span class="p">)</span>
-                    <span class="p">}</span>
-                    
-                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                    <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Oops, your missed your shoot&quot;</span><span class="p">);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        
-        <span class="kd">var</span> <span class="nx">total</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="mf">3</span><span class="o">/</span><span class="nx">guesses</span><span class="p">)</span><span class="o">*</span><span class="mf">100</span><span class="p">)</span>
-        <span class="kd">var</span> <span class="nx">stats</span> <span class="o">=</span> <span class="s2">&quot;You have guessed &quot;</span> <span class="o">+</span> <span class="nx">guesses</span> <span class="o">+</span> <span class="s2">&quot; times for enemy&#39;s ship position. &quot;</span> <span class="o">+</span>
-        <span class="s2">&quot;Your have &quot;</span> <span class="o">+</span> <span class="nx">total</span> <span class="o">+</span><span class="s2">&quot;% shooting acuracy for this game &quot;</span><span class="p">;</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="nx">stats</span><span class="p">);</span>
-        
-        <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Game Over, refresh this page and press start to start a new game&quot;</span><span class="p">)</span>
-
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Battleship<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Enemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 9<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;battleship()&quot;</span><span class="p">&gt;</span>Start Game<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-
-
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</pre></div>
-
-     </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<html>
-<head>
-<script>
-var randomNumber = Math.floor((Math.random() * 8))
-var location1 = randomNumber;
-var location2 = location1 + 1;
-var location3 = location2 + 1;
-
-var location1Hit = false;
-var location2Hit = false;
-var location3Hit = false;
-
-var guess;
-var hits = 0;
-var guesses = 0;
-
-
-var isSunk = false;
-
-function battleship(){
-        while (isSunk == false){
-
-            guess = prompt ("Put coordinate to aim your cannon by enterring any number between 0 to 9:");
-
-            if (guess < 1 || guess > 9) {
-                alert("Invalid Coordinate !! Enter a valid number");
-            } else if (guess == location1 && location1Hit == true || guess == location2 && location2Hit == true || guess == location3 && location3Hit == true){
-                alert("You have hit this part of submarine, aim for the other part");
-            } else {
-                guesses = guesses+1;
-
-                if (guess == location1){
-                    
-                    location1Hit = true;
-                    alert("You hit enemy's submarine !!!");
-                    hits = hits + 1;
-                    
-
-                    if (hits === 3) {
-                    isSunk = true;
-                    alert("Enemy submarine has been successfully sunk")
-                    }
-                    
-                } else if (guess == location2){
-                    
-                    location2Hit = true;
-                    alert("You hit enemy's submarine !!!");
-                    hits = hits + 1;
-                    
-
-                    if (hits === 3) {
-                    isSunk = true;
-                    alert("Enemy submarine has been successfully sunk")
-                    }
-                    
-                } else if (guess == location3){
-                    
-                    location3Hit = true;
-                    alert("You hit enemy's submarine !!!");
-                    hits = hits + 1;
-                    
-
-                    if (hits === 3) {
-                    isSunk = true;
-                    alert("Enemy submarine has been successfully sunk")
-                    }
-                    
-                } else {
-                    alert("Oops, your missed your shoot");
-                }
-            }
-        }
-        
-        var total = Math.floor((3/guesses)*100)
-        var stats = "You have guessed " + guesses + " times for enemy's ship position. " +
-        "Your have " + total +"% shooting acuracy for this game ";
-        alert(stats);
-        
-        alert("Game Over, refresh this page and press start to start a new game")
-
-}
-</script>
-</head>
-<body>
-
-<h3>Battleship</h3>
-<p>Enemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 9</p>
-<button type="button" onclick="battleship()">Start Game</button>
-
-</body>
-
-
-
-
-</html>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Activate-Environment">Activate Environment<a class="anchor-link" href="#Activate-Environment">&#182;</a></h3><p><code>conda activate ENV_NAME</code><br />
+Change ENV_NAME into the name of environment you just created that you want to activate</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Deactivate-Environment">Deactivate Environment<a class="anchor-link" href="#Deactivate-Environment">&#182;</a></h3><p><code>conda deactivate</code></p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Delete-Environment">Delete Environment<a class="anchor-link" href="#Delete-Environment">&#182;</a></h3><p><code>conda env remove -n ENV_NAME</code><br />
+Change ENV_NAME into the name of environment you need to remove</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Update-Python">Update Python<a class="anchor-link" href="#Update-Python">&#182;</a></h3><p><code>conda update python</code></p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Update-Anaconda">Update Anaconda<a class="anchor-link" href="#Update-Anaconda">&#182;</a></h3><p><code>conda update --all</code><br />
+This need to be done for all environments</p>
 
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Install-JupyterLab">Install JupyterLab<a class="anchor-link" href="#Install-JupyterLab">&#182;</a></h3><p><code>conda install -c conda-forge jupyterlab</code><br />
+<code>conda install -c conda-forge jupyterlab=3.0.6</code><br />
+And you can change <em>3.0.6</em> into anyt jupyterlab version that you want</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Update-JupyterLab">Update JupyterLab<a class="anchor-link" href="#Update-JupyterLab">&#182;</a></h3><p><code>conda update -c conda-forge jupyterlab</code></p>
+
+</div>
 </div>
 </body>
-
-
-
-
-
 
 
 </html>
