@@ -28,9 +28,7 @@ title: home
             <div class="row py-5">
                 <h5>About</h5>
                 <p>
-                    Hello, I am <a href="https://edwardjoesoef.com">Edward</a> and this is <b>Qnods</b>, a data science, fintech, and web related blog that I write as I learn new things in those fields. 
-                    I also plan to put some notes that I write as I am doing certain coding works for my own reminder in this blog as well.
-                    Other than that, I will also post some projects in this blog as well. 
+                    This is a <b>Qnods</b> blog, a collection of various codes, notes, and projects on data science, fintech, and web related stuffs. Contents will be slowly added. 
                 </p>
                 <p style="word-spacing: 30px;">
                 <a href="mailto:hello@qnods.com"><img src="{{ 'assets/img/envelope.svg' | relative_url}}" class="img-fluid" height=25 width=25></a>
