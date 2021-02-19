@@ -1,7 +1,8 @@
 ---
 title: Getting Started with Anaconda
-layout: post-notes
+layout: post-anaconda
 tags: [notes, anaconda]
+excerpt: A note on how to setup anaconda including its environment and install some application
 ---
 
 <html>

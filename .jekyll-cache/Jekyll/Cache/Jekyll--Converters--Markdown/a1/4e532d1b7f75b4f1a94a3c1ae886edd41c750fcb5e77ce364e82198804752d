@@ -1,0 +1,80 @@
+I"Î:<div class="search">
+    <div class="form-group mb-3">
+        <form action="/search.html" method="get">
+        <input class="form-control" type="text" id="search-box" name="query" placeholder="Type your search and press Enter" />
+        </form>
+    </div>
+</div>
+
+<ul id="search-results"></ul>
+
+<!-- Script to show search result -->
+<script>
+window.store = {
+  
+  
+  
+  
+    "posts-python-start-html": {
+      "title": "Getting Started with Python",
+      "author": "",
+      "category": "",
+      "content": "\n\n\n\nGetting Started on Python\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n    \n    \n    \n\n\n\n\nThis is a guide that I create for installation of python direct from python.org\n\n\n\n\n\n\nStart with dowloading python from www.python.org\nInstall python from the downloaded file\nHow to check if python has successfully installed ?\nA: Open your terminal and type python --version and python should come with its version installed\nCreate virtual environment\nThis is for safe precaution, in the event of anything wrong, all you need to do is just deleted the environment isntead reinstalled python from the \nstart. this can be done by following the step below.\ncreate a folder where you want all your python packages and data to be installed, for instance lets name it pythondata\nyou can make folder by using usual way of right click and new folder or if you want to try to from terminal, you can make folder by using mkdir command, in this case we will type mkdir pythondata\nnext, if you are not yet in the terminal, open your terminal, go into the folder that you just created using cd command, like cd python/pythondata if that is the location of your folder. \nafter enter the folder type this command python -m env work with work is the name of your environment. You can change work into any other name.\nand that's it, an environment called work should have been created.\n\n\nAfter the environment has been created and still on terminal and on your folder, type cd work with work is the name of environment you just created.\nthen type \\Scripts\\activate.bat and voila you will be entering your environment. \n\nAdditional Note&#182;To install any python package, you can just this command python -m pip install numpy with numpy is the name of the package.\nTo remove environment, just ensure you have deactivated the environment first by simply typing deactivate while you are still in environment and delete the respective folder.\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "url": "/posts/python-start.html"
+    }
+    ,
+  
+    "posts-test-html": {
+      "title": "Test Looks on Jupyter Lab",
+      "author": "",
+      "category": "",
+      "content": "\n\n\n\nTest\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n    \n    \n    \n\n\n\n\nThis cell is Markdown\n\n\n\n\n\nHeading1&#182;Heading 2&#182;Heading 3&#182;italic\nbold\n\nlist 1\nlist 2\nlist 3\n\n\norder 1\norder 2\norder 3\n\nBlocquote\n\n\nThis is an inline code\nThis is a longer code\n\nlorem ipsum dolores amet\nlorem ipsum dolores amet\nlorem ipsum dolores amet\n\n\n\n\n\nIn&nbsp;[3]:\n\n     \narea=[&quot;hallway&quot;,10.00,&quot;living room&quot;,12]\nprint (area[1])\nprint(area[1:3])\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n10.0\n[10.0, &#39;living room&#39;]\n\n\n\n\n\n\n\n\n\n\n\nIn&nbsp;[4]:\n\n     \nprint(area[-1])\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n12\n\n\n\n\n\n\n\n\n\n\n\nIn&nbsp;[&nbsp;]:\n\n     \n \n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "url": "/posts/test.html"
+    }
+    ,
+  
+    "posts-conda-start-html": {
+      "title": "Getting Started with Anaconda",
+      "author": "",
+      "category": "",
+      "content": "\n\n\n\nThe Anaconda Way\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n    \n    \n    \n\n\n\n\nThis my notes on how I start with Anaconda.\nAs per usual start with Anaconda, as per the time this is written I need to choose Anaconda Individual Edition from Anaconda website and install it as per usual like any other program.\n\n\n\n\n\nCreate Environment in Anaconda&#182;conda create --name ENV_NAME python=PYTHON_VERSION\nChange \"ENV_NAME\" to the environment name of your choice, same with PYTHON_VERSION, it should be change into actual version of python like 2.7 or 3.7, etc. A simple way is to create environment via Anaconda Navigator.\n\n\n\n\n\nActivate Environment&#182;conda activate ENV_NAME\nChange ENV_NAME into the name of environment you just created that you want to activate\n\n\n\n\n\nDeactivate Environment&#182;conda deactivate\n\n\n\n\n\nDelete Environment&#182;conda env remove -n ENV_NAME\nChange ENV_NAME into the name of environment you need to remove\n\n\n\n\n\nUpdate Python&#182;conda update python\n\n\n\n\n\nUpdate Anaconda&#182;conda update --all\nThis need to be done for all environments\n\n\n\n\n\nInstall JupyterLab&#182;conda install -c conda-forge jupyterlab\nconda install -c conda-forge jupyterlab=3.0.6\nAnd you can change 3.0.6 into anyt jupyterlab version that you want\n\n\n\n\n\nUpdate JupyterLab&#182;conda update -c conda-forge jupyterlab\n\n\n\n\n\n\n\n",
+      "url": "/posts/conda-start.html"
+    }
+    ,
+  
+    "posts-python-101-html": {
+      "title": "Basic Python 101",
+      "author": "",
+      "category": "",
+      "content": "\n\n\n\nBasic Python 101\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n    \n    \n    \n\n\n\n\nIn this note, I will record my earlier understanding about how to use Python\nPutting up a comment&#182;Comment in the script will be written by putting # in front of the comment you want to write.\n\n\n\n\n\nIn&nbsp;[2]:\n\n     \n#this will not appear in the output\nprint(&quot;this one will appear in the output&quot;)\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\nthis one will appear in the output\n\n\n\n\n\n\n\n\n\n\n\nMath Operator&#182;There are couple of math operator that can be used within python. All of them can be used in combination with each other\n\n+ for addition\n- for substraction\n/ for division\n* for multiplication\n** for exponentiaation\n% for remainder\n\n\n\n\n\n\nIn&nbsp;[4]:\n\n     \nprint (2+5)\nprint (8-2)\nprint (16/2)\nprint (9*2)\nprint (8**2)\nprint (14%3)\nprint (5+2*5)\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n7\n6\n8.0\n18\n64\n2\n15\n\n\n\n\n\n\n\n\n\n\n\nVariable&#182;Let's talk about variable. A variable allow us to use its value by referring to the name of the variable.\n\n\n\n\n\nIn&nbsp;[5]:\n\n     \n#The code below is a variable and the number 777 is the value\nlucky_number = 777\n\n# We can print lucky number by just mentioning its name\nprint (lucky_number)\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n777\n\n\n\n\n\n\n\n\n\n\n\nTypes of Variable&#182;There are many types of variable, such as\n\nint or integer is a full number without fraction\nfloat is a number that contain fraction\nstr or string is a text. Text need to be written within single quote or double quote mark\nbool or boolean which is basically just True or False\n\n\n\n\n\n\nIn&nbsp;[6]:\n\n     \n#let&#39;s guess the type for its variable below\na = 100\nb = 0.5\nc = &quot;Good Morning&quot;\nd = True\n\n#Ready to see the answer ?\nprint (type(a))\nprint (type(b))\nprint (type(c))\nprint (type(d))\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n&lt;class &#39;int&#39;&gt;\n&lt;class &#39;float&#39;&gt;\n&lt;class &#39;str&#39;&gt;\n&lt;class &#39;bool&#39;&gt;\n\n\n\n\n\n\n\n\n\n\n\nVariable Conversion&#182;Python allow us to convert the variable type, otherwise we cannot combine two variable into one print. This is the example:\n\n\n\n\n\nIn&nbsp;[13]:\n\n     \n#originally this is a integer variable\ne = 888\n\n#let&#39;s try to put that into a sentence\nprint (&quot;I have &quot; + e + &quot; apples&quot;)\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\n&lt;ipython-input-13-fdd9c2a0283b&gt; in &lt;module&gt;\n      3 \n      4 #let&#39;s try to put that into a sentence\n----&gt; 5 print (&#34;I have &#34; + e + &#34; apples&#34;)\n\nTypeError: can only concatenate str (not &#34;int&#34;) to str\n\n\n\n\n\n\n\n\n\n\nIn&nbsp;[12]:\n\n     \n# so this is how I convert the variable\nprint (&quot;I have &quot; + str(e) + &quot; apples&quot;)\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\nI have 888 apples\n\n\n\n\n\n\n\n\n\n\n\nAnd that's really plenty of apple.\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "url": "/posts/python-101.html"
+    }
+    ,
+  
+    "posts-javascript-101-html": {
+      "title": "Basic JavaScript 101",
+      "author": "",
+      "category": "",
+      "content": "\n\n\n\nJavaScript Flow\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n    \n    \n    \n\n\n\n\nFlow&#182;\n\n\n\n\n\nvar a, b, c;       // Declare Variables\na = 2; b = 3;      // Assign Values\nc = a + b;         // Compute Values\n\n\n\n\n\nComments&#182;\n\n\n\n\nSingle Line Comment is marked with // sign, like shown below:\n\nvar a = 8;      // Declare a with value of 8\nvar b = 8 + 2;  // Declare b with value of 8 plus 2\nMulti Line Comment is marked with /* at the beginning of the comment and */ at the end of the comment\n\n/*\nLorem Ipsum Dolores Amet\nconsectetur adipiscing elit, \nsed do eiusmod tempor incididunt \nut labore et dolore magna aliqua\n*/\n\ndocument.getElementById(\"testId1\").innerHTML = \"Hello World\";\ndocument.getElementById(\"testId2\").innerHTML = \"How Are You ?\";\n\n\n\n\n\nVariables&#182;\n\n\n\n\nIn general variables are declared with the keyword var. However, since 2015 there is let and const\nlet cannot be re-declared within the same scope but it can be updated\nconst cannot be re-declared and cannot be updated\n\n\n\n\n\nData Type&#182;\nlet age = 16;                                  // Number\nlet lastName = \"Wayne\";                        // String\nlet a = {firstName:\"Clark\", lastName:\"Kent\"};  // Object\nCombining several data type in one variable, the result can be different. It is determined by the position of string data type, if it starts with string the subsequent data will be treated as string. If it is started with number, it will remain number until it reaches data with string type. Take a look at example below:\n\n\n\n\n\nIn&nbsp;[1]:\n\n     \n%%html\n&lt;html&gt;\n&lt;body&gt;\n\n&lt;p id=&quot;test1&quot;&gt;&lt;/p&gt;\n&lt;p id=&quot;test2&quot;&gt;&lt;/p&gt;\n\n\n&lt;script&gt;\nvar a = &quot;Cards &quot; + 700 + 77;\nvar b = 700 + 77 + &quot; Cards&quot;\ndocument.getElementById(&quot;test1&quot;).innerHTML = a;\ndocument.getElementById(&quot;test2&quot;).innerHTML = b;\n&lt;/script&gt;\n\n&lt;/body&gt;\n&lt;/html&gt;\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn&nbsp;[&nbsp;]:\n\n     \n \n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "url": "/posts/javascript-101.html"
+    }
+    ,
+  
+    "posts-simple-battleship-html": {
+      "title": "Simple Battleship Game with JavaScript",
+      "author": "",
+      "category": "",
+      "content": "\n\n\n\nSimple BattleShip\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n\n\n\n    \n    \n    \n    \n\n\n\n\nThis is a simple battleship game, that I create using JavaScript\n\n\n\n\n\nIn&nbsp;[1]:\n\n     \n%%html\n&lt;html&gt;\n&lt;head&gt;\n&lt;script&gt;\nvar randomNumber = Math.floor((Math.random() * 8))\nvar location1 = randomNumber;\nvar location2 = location1 + 1;\nvar location3 = location2 + 1;\n\nvar location1Hit = false;\nvar location2Hit = false;\nvar location3Hit = false;\n\nvar guess;\nvar hits = 0;\nvar guesses = 0;\n\n\nvar isSunk = false;\n\nfunction battleship(){\n        while (isSunk == false){\n\n            guess = prompt (&quot;Put coordinate to aim your cannon by enterring any number between 0 to 9:&quot;);\n\n            if (guess &lt; 0 || guess &gt; 9) {\n                alert(&quot;Invalid Coordinate !! Enter a valid number&quot;);\n            } else if (guess == location1 &amp;&amp; location1Hit == true || guess == location2 &amp;&amp; location2Hit == true || guess == location3 &amp;&amp; location3Hit == true){\n                alert(&quot;You have hit this part of submarine, aim for the other part&quot;);\n            } else {\n                guesses = guesses+1;\n\n                if (guess == location1){\n                    \n                    location1Hit = true;\n                    alert(&quot;You hit enemy&#39;s submarine !!!&quot;);\n                    hits = hits + 1;\n                    \n\n                    if (hits === 3) {\n                    isSunk = true;\n                    alert(&quot;Enemy submarine has been successfully sunk&quot;)\n                    }\n                    \n                } else if (guess == location2){\n                    \n                    location2Hit = true;\n                    alert(&quot;You hit enemy&#39;s submarine !!!&quot;);\n                    hits = hits + 1;\n                    \n\n                    if (hits === 3) {\n                    isSunk = true;\n                    alert(&quot;Enemy submarine has been successfully sunk&quot;)\n                    }\n                    \n                } else if (guess == location3){\n                    \n                    location3Hit = true;\n                    alert(&quot;You hit enemy&#39;s submarine !!!&quot;);\n                    hits = hits + 1;\n                    \n\n                    if (hits === 3) {\n                    isSunk = true;\n                    alert(&quot;Enemy submarine has been successfully sunk&quot;)\n                    }\n                    \n                } else {\n                    alert(&quot;Oops, your missed your shoot&quot;);\n                }\n            }\n        }\n        \n        var total = Math.floor((3/guesses)*100)\n        var stats = &quot;You have guessed &quot; + guesses + &quot; times for enemy&#39;s ship position. &quot; +\n        &quot;Your have &quot; + total +&quot;% shooting acuracy for this game &quot;;\n        alert(stats);\n        \n        alert(&quot;Game Over, refresh this page and press start to start a new game&quot;)\n\n}\n&lt;/script&gt;\n&lt;/head&gt;\n&lt;body&gt;\n\n&lt;h3&gt;Battleship&lt;/h3&gt;\n&lt;p&gt;Enemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 9&lt;/p&gt;\n&lt;button type=&quot;button&quot; onclick=&quot;battleship()&quot;&gt;Start Game&lt;/button&gt;\n\n&lt;/body&gt;\n\n\n\n\n&lt;/html&gt;\n\n\n     \n\n\n\n\n\n\n\n\n\n\n\n    \n    \n\n\n\n\n\n\n\n\n\n\nBattleship\nEnemy submarine is right in front of you, guess its coordinate and shoot your cannon by entering any number between 1 to 9\nStart Game\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "url": "/posts/simple-battleship.html"
+    }
+    
+  
+}
+</script>
+
+<!-- Custom JS -->
+<script type="text/javascript" src="/assets/js/custom/lunr.js"></script>
+
+<script type="text/javascript" src="/assets/js/custom/search.process.js"></script>
+
+:ET

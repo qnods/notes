@@ -1,7 +1,8 @@
 ---
 title: Getting Started with Python
-layout: post-notes
+layout: post-python
 tags: [notes, python]
+excerpt: This is a guide on installing python on windows for python from python.org
 ---
 
 <html>

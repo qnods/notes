@@ -1,0 +1,25 @@
+I"W<h3 class="text-center">All Posts about using Anaconda</h3>
+<div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+    
+    <div class="col">
+          <div class="card border-0 h-100">
+              <div class="card-body">
+                  <small class="text-muted postDate">25 January 2021</small>
+                  <h5 class="card-title"><a href="/posts/conda-start.html" class="text-dark">Getting Started with Anaconda</a></h5>
+                  <p class="card-text">A note on how to setup anaconda including its environment and install some application</p>
+              </div>
+          </div>
+    </div>
+    
+    <div class="col">
+          <div class="card border-0 h-100">
+              <div class="card-body">
+                  <small class="text-muted postDate">24 January 2021</small>
+                  <h5 class="card-title"><a href="/posts/test.html" class="text-dark">Test Looks on Jupyter Lab</a></h5>
+                  <p class="card-text">This is a testing for some markdown format and inline code function with JupyterLab</p>
+              </div>
+          </div>
+    </div>
+    
+</div>
+:ET

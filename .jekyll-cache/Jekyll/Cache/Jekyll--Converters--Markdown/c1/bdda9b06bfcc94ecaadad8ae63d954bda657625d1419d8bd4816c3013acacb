@@ -1,0 +1,104 @@
+I":<!-- Main Picture -->
+<div class="container pt-3 d-lg-none">
+    <div class="row text-center">
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-9">
+            <img src="/assets/img/Qnods%20Main%20Page.png" class="img-fluid" alt="responsive image" width="960" />
+        </div>
+    </div>
+</div>
+
+<!-- Content Start -->
+<div class="container pt-3">
+    <div class="row">
+
+        <div class="col-lg-3">
+            <form action="/search.html" method="get">
+                <input class="form-control" type="text" id="search-box" name="query" placeholder="looking for something ?" />
+            </form>
+            <h3 class="pt-3">About</h3>
+            <p style="text-align: justify;">
+                Hello, I am <a href="https://edwardjoesoef.com">Edward</a> and this is <b>Qnods</b>, a data science, fintech, and web related blog that I write as I learn new things in those fields. 
+                I also plan to put some notes that I write as I am doing certain coding works for my own reminder in this blog as well.
+                Other than that, I will also post some projects in this blog as well. 
+            </p>
+            <p style="word-spacing: 30px;">
+              <a href="mailto:hello@qnods.com"><img src="/assets/img/envelope.svg" class="img-fluid" height="25" width="25" /></a>
+            </p>
+        </div>
+        <div class="col-lg-9">
+            <h2>Latest Post</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              
+              <div class="col">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <small class="text-muted postDate">11 February 2021</small>
+                            <h5 class="card-title"><a href="/posts/simple-battleship.html" class="text-dark">Simple Battleship Game with JavaScript</a></h5>
+                            <p class="card-text">A simple battleship game that is built using javascript. Don't expect anything fancy though.</p>
+                        </div>
+                    </div>
+              </div>
+              
+              <div class="col">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <small class="text-muted postDate">01 February 2021</small>
+                            <h5 class="card-title"><a href="/posts/javascript-101.html" class="text-dark">Basic JavaScript 101</a></h5>
+                            <p class="card-text">Getting started with javascript. This note focus on some code to display javascript result.</p>
+                        </div>
+                    </div>
+              </div>
+              
+              <div class="col">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <small class="text-muted postDate">27 January 2021</small>
+                            <h5 class="card-title"><a href="/posts/python-101.html" class="text-dark">Basic Python 101</a></h5>
+                            <p class="card-text">a note on some of the basic python codes.</p>
+                        </div>
+                    </div>
+              </div>
+              
+              <div class="col">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <small class="text-muted postDate">25 January 2021</small>
+                            <h5 class="card-title"><a href="/posts/conda-start.html" class="text-dark">Getting Started with Anaconda</a></h5>
+                            <p class="card-text">a notes on how to setup anaconda including its environment and install some application</p>
+                        </div>
+                    </div>
+              </div>
+              
+              <div class="col">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <small class="text-muted postDate">24 January 2021</small>
+                            <h5 class="card-title"><a href="/posts/test.html" class="text-dark">Test Looks on Jupyter Lab</a></h5>
+                            <p class="card-text">This is a testing for some markdown format and inline code function with JupyterLab</p>
+                        </div>
+                    </div>
+              </div>
+              
+              <div class="col">
+                    <div class="card border-0 h-100">
+                        <div class="card-body">
+                            <small class="text-muted postDate">17 January 2021</small>
+                            <h5 class="card-title"><a href="/posts/python-start.html" class="text-dark">Getting Started with Python</a></h5>
+                            <p class="card-text">This is a guide on installing python on windows for python from python.org</p>
+                        </div>
+                    </div>
+              </div>
+              
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Custom JS -->
+<script type="text/javascript" src="/assets/js/custom/edward.custom.blog.js"></script>
+
+:ET

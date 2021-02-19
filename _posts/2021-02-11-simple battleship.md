@@ -2,6 +2,7 @@
 title: Simple Battleship Game with JavaScript
 layout: post-projects
 tags: [projects, javascript, web]
+excerpt: A simple battleship game that is built using javascript. Don't expect anything fancy though. 
 ---
 
 <html>
