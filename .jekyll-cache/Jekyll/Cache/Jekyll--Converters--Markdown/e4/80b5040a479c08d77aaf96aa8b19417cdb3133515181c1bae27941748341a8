@@ -1,0 +1,25 @@
+I"k<h3 class="text-center">All Posts about Web Coding</h3>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    
+    <div class="col">
+          <div class="card border-0 h-100">
+              <div class="card-body">
+                  <small class="text-muted postDate">11 February 2021</small>
+                  <h5 class="card-title"><a href="/posts/simple-battleship.html" class="text-dark">Simple Battleship Game with JavaScript</a></h5>
+                  <p class="card-text">A simple battleship game that is built using javascript. Don't expect anything fancy though.</p>
+              </div>
+          </div>
+    </div>
+    
+    <div class="col">
+          <div class="card border-0 h-100">
+              <div class="card-body">
+                  <small class="text-muted postDate">01 February 2021</small>
+                  <h5 class="card-title"><a href="/posts/javascript-101.html" class="text-dark">Basic JavaScript 101</a></h5>
+                  <p class="card-text">Getting started with javascript. This note focus on some code to display javascript result.</p>
+              </div>
+          </div>
+    </div>
+    
+</div>
+:ET

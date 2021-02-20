@@ -4,7 +4,7 @@ layout: default-aligned
 ---
 
 <h3 class="text-center">All Posts on JavaScript</h3>
-<div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+<div class="row row-cols-1 row-cols-md-3 g-4">
     {% for post in site.tags.javascript %}
     <div class="col">
           <div class="card border-0 h-100">
